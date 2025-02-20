@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Optimization -->
+  <meta name="description" content="PixelCraft Studio - Compress, enhance, and edit images, videos, and PDFs online. Remove backgrounds, optimize files, and more. Powered by Ridhuwan.">
+  <meta name="keywords" content="image compression, video compression, remove background, PDF editor, image enhancer, video enhancer, online tools, Ridhuwan">
+  <meta name="author" content="Ridhuwan">
+  <meta property="og:title" content="PixelCraft Studio - Online Image, Video, and PDF Tools">
+  <meta property="og:description" content="Compress, enhance, and edit images, videos, and PDFs online. Remove backgrounds and optimize files for free. Powered by Ridhuwan.">
+  <meta property="og:image" content="https://yourdomain.com/logo.png"> <!-- Replace with your logo URL -->
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>PixelCraft Studio - Home</title>
+  <!-- Styles -->
+  <style>
+    :root {
+      --primary-color: #6366f1; /* Modern Purple */
+      --secondary-color: #10b981; /* Modern Green */
+      --background-color: #f8fafc; /* Light Gray */
+      --text-color: #1e293b; /* Dark Gray */
+      --white: #ffffff;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --border-radius: 12px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--white);
+      box-shadow: var(--shadow);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo img {
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    .branding {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .website-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .powered-by {
+      font-size: 0.875rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      font-weight: 500;
+      color: #475569;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: var(--white);
+      padding: 4rem 2rem;
+      text-align: center;
+      border-radius: var(--border-radius);
+      margin: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cta-button {
+      background: var(--white);
+      color: var(--primary-color);
+      padding: 1rem 2rem;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .hero .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Tools Section */
+    .tools {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tools h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .tool-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .tool-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .tool-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tool-card p {
+      font-size: 1rem;
+      color: #64748b;
+      margin-bottom: 1.5rem;
+    }
+
+    .tool-card .cta-button {
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .tool-card .cta-button:hover {
+      background: var(--secondary-color);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--white);
+      margin-top: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="PixelCraft Studio Logo"> <!-- Replace with your logo file -->
+      <div class="branding">
+        <div class="website-name">PixelCraft Studio</div>
+        <div class="powered-by">Powered by Ridhuwan</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Your All-in-One Online Toolbox</h1>
+    <p>Compress, enhance, and edit images, videos, and PDFs with ease. Remove backgrounds, optimize files, and more.</p>
+    <a href="#tools" class="cta-button">Explore Tools</a>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="tools" id="tools">
+    <h2>Our Tools</h2>
+    <div class="tools-grid">
+      <!-- Image Compression -->
+      <div class="tool-card">
+        <div class="tool-icon">📦</div>
+        <h3>Image Compression</h3>
+        <p>Reduce image file size without losing quality.</p>
+        <a href="#" class="cta-button">Use Tool</a>
+      </div>
+
+      <!-- Image Background Remover -->
+      <div class="tool-card">
+        <div class="tool-icon">🧹</div>
+        <h3>Remove Background</h3>
+        <p>Instantly remove backgrounds from images.</p>
+        <a href="#" class="cta-button">Use Tool</a>
+      </div>
+
+      <!-- Image Enhancer -->
+      <div class="tool-card">
+        <div class="tool-icon">✨</div>
+        <h3>Image Enhancer</h3>
+        <p>Improve image quality with AI-powered enhancement.</p>
+        <a href="#" class="cta-button">Use Tool</a>
+      </div>
+
+      <!-- Video Compression -->
+      <div class="tool-card">
+        <div class="tool-icon">📹</div>
+        <h3>Video Compression</h3>
+        <p>Compress videos without compromising quality.</p>
+        <a href="#" class="cta-button">Use Tool</a>
+      </div>
+
+      <!-- Video Background Remover -->
+      <div class="tool-card">
+        <div class="tool-icon">🎬</div>
+        <h3>Remove Video Background</h3>
+        <p>Remove backgrounds from videos effortlessly.</p>
+        <a href="#" class="cta-button">Use Tool</a>
+      </div>
+
+      <!-- Video Enhancer -->
+      <div class="tool-card">
+        <div class="tool-icon">🔍</div>
+        <h3>Video Enhancer</h3>
+        <p>Enhance video quality with advanced AI tools.</p>
+        <a href="#" class="cta-button">Use Tool</a>
+      </div>
+
+      <!-- PDF Editor -->
+      <div class="tool-card">
+        <div class="tool-icon">✏️</div>
+        <h3>PDF Editor</h3>
+        <p>Edit, merge, and compress PDFs online.</p>
+        <a href="#" class="cta-button">Use Tool</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 PixelCraft Studio. All rights reserved. Powered by Ridhuwan.</p>
+  </footer>
+</body>
+</html>
